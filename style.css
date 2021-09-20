@@ -1,11 +1,18 @@
 body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    background-color: blueviolet;
+    
 }
 
-startBtn{
+.startBtn{
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
+}
+
+.startBtn button{
+    font-size: 50px;
+    font-weight: 500;
+    color: crimson;
+    
 }
