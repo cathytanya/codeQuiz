@@ -3,12 +3,10 @@ body{
     margin: 0%;
     height: 100%;
     background-color: orchid;
-
 }
 
-
-
-.startBtn{
+.startBtn,
+.quizRulesBox{
     position: absolute;
     top: 50%;
     left: 50%;
@@ -20,6 +18,33 @@ body{
     font-weight: 500;
     color: crimson;
     border-radius: 20px;
-    background: white;
-    
+    background: white;    
+}
+
+.quizRulesBox{
+    background-color: cornsilk;
+    position: absolute;
+    border-radius: 20%;
+    font-size: 20px;
+    width: 600px;
+    padding: 0 20px 30px;
+    border: 10px double crimson;
+
+}
+
+.quizRulesBox .quizRule{
+    height: 70px;
+    width: 80%;
+    border-bottom: 4px solid orchid;
+    font-size: 50px;
+    align-items: center;
+    padding: 0 25px;
+}
+
+.start {
+    font-size: 25px;
+    color: rgb(122, 11, 104);
+    border-radius: 20px;
+    background: rgb(221, 183, 220); 
+    align-items: center;
 }
