@@ -4,20 +4,20 @@ body{
     height: 100%
 }
 
-.startBtn,
-.quizRulesBox{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-}
-
 .startBtn button{
     font-size: 50px;
     font-weight: 500;
     color: crimson;
     border-radius: 20px;
     background: white;    
+}
+
+.startBtn,
+.quizRulesBox{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .quizRulesBox{
@@ -29,6 +29,8 @@ body{
     padding: 0 20px 30px;
     border: 10px double crimson;
 }
+/* .quizRulesBox::after{
+    } */
 
 .quizRulesBox .rules span{
     color: crimson;
