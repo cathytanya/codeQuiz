@@ -2,7 +2,7 @@ body{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0%;
     height: 100%;
-    background-color: orchid;
+    /* background-color: orchid; */
 }
 
 .startBtn,
