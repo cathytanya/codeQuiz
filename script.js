@@ -5,12 +5,14 @@ let questionElement = document.getElementById("questionElement");
 let answerElement = document.getElementById("answerElement");
 let timer = document.getElementById("timer");
 let highScore = document.getElementById("highScore");
-
+// each of these choices will hold the options the user have
 let choiceA = document.getElementById("A");
 let choiceB = document.getElementById("B");
 let choiceC = document.getElementById("C");
 let choiceD = document.getElementById("D");
-
+// will help with moving from one question to the next
+let lastQuestionIndex = question.length-1;
+let runningQuestionIndex = 0;
 // putting all the questions/options/answers into the dictonary
 let questions = [
     {
@@ -78,8 +80,18 @@ let questions = [
     },
 ]
 
-function startquiz (){
-    let quizRulesBox = document.getElementById("quizRulesBox");
-    quizRulesBox.setAttribute("style", "display: none");
+function renderQuestion(){
+    let q = question[runningQuestionIndex];
+    question.innerHTML = "<p>"+q.question+"</p>";
+    choiceA.innerHTML = q.choiceA;
+    choiceB.innerHTML = q.choiceB;
+    choiceC.innerHTML = q.choiceC;
+    choiceD.innerHTML = q.choiceD;
 }
-start.onclick = startquiz
+runningQuestionIndex++
+renderQuestion();
+// function startquiz (){
+//     let quizRulesBox = document.getElementById("quizRulesBox");
+//     quizRulesBox.setAttribute("style", "display: none");
+// }
+// start.onclick = startquiz
