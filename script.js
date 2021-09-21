@@ -1,4 +1,11 @@
 let start = document.getElementById("start");
+let question = document.getElementById("question");
+let questionElement = document.getElementById("questionElement");
+let answerElement = document.getElementById("answerElement");
+let timer = document.getElementById("timer");
+let highScore = document.getElementById("highScore");
+
+
 
 var questions = [
     {
