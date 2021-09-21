@@ -19,8 +19,7 @@ body{
     transform: translate(-50%,-50%);
 }
 
-.quizRulesBox{
-
+#quizRulesBox{
     background-color: cornsilk;
     position: absolute;
     border-radius: 20%;

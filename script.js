@@ -6,58 +6,75 @@ let answerElement = document.getElementById("answerElement");
 let timer = document.getElementById("timer");
 let highScore = document.getElementById("highScore");
 
+let choiceA = document.getElementById("A");
+let choiceB = document.getElementById("B");
+let choiceC = document.getElementById("C");
+let choiceD = document.getElementById("D");
+
 // putting all the questions/options/answers into the dictonary
-var questions = [
+let questions = [
     {
         // Question 1
-        Title: 'Which element is nonsemantic?',
-        Questions: ['div','form', 'header', 'footer'],
-        Answer: 'div'
+        question: 'Which element is nonsemantic?',
+        choiceA: 'div',
+        choiceB: 'form',
+        choiceC: 'header',
+        choiceD:'footer',
+        answer: 'A'
     },
     {
         // question 2
-        Title: 'What is the purpose of  HTML?',
-        Questions: ['Basic structure of website',
-                    'Used to control presentation',
-                    'Used to control the behaviour of different elements',
-                    'footer'],
-        Answer: 'Basic structure of website'
+        question: 'What is the purpose of  HTML?',
+        choiceA: 'Basic structure of website',
+        choiceB: 'Used to control presentation',
+        choiceC: 'Used to control the behaviour of different elements',
+        choiceD: 'Task automation',
+        answer: 'A'
     },
     {
         // question 3
-        Title: 'What is the purpose of  CSS?',
-        Questions: ['Basic structure of website',
-                    'Used to control presentation',
-                    'Used to control the behaviour of different elements',
-                    'footer'],
-        Answer: 'Used to control presentation'
+        question: 'What is the purpose of  CSS?',
+        choiceA: 'Basic structure of website',
+        choiceB: 'Used to control presentation',
+        choiceC: 'Used to control the behaviour of different elements',
+        choiceD: 'Task automation',
+        answer: 'B'
     },
     {
         // question 4
-        Title: 'What is the purpose of  JavaScript?',
-        Questions: ['Basic structure of website',
-                    'Used to control presentation',
-                    'Used to control the behaviour of different elements',
-                    'footer'],
-        Answer: 'Used to control the behaviour of different elements'
+        question: 'What is the purpose of  JavaScript?',
+        choiceA: 'Basic structure of website',
+        choiceB: 'Used to control presentation',
+        choiceC: 'Used to control the behaviour of different elements',
+        choiceD: 'Task automation',
+        answer: 'C'
     },
     {
         // question 5
-        Title: 'What does "ppl" represent in the following? ppl = ["Bob","Sam","Jill","Jo","Shawn"]',
-        Questions: ['boolean','array','string','variable'],
-        Answer: 'array'
+        question: 'What does "ppl" represent in the following? ppl = ["Bob","Sam","Jill","Jo","Shawn"]',
+        choiceA: 'boolean',
+        choiceB: 'array',
+        choiceC: 'string',
+        choiceD: 'variable',
+        answer: 'B'
     },
     {
         // question 6
-        Title: 'What is a "true" element?',
-        Questions: ['boolean','array','string','variable'],
-        Answer: 'boolean'
+        question: 'What is a "true" element?',
+        choiceA: 'boolean',
+        choiceB: 'array',
+        choiceC: 'string',
+        choiceD: 'variable',
+        answer: 'A'
     },
     {
         // quesiton 7
-        Title: 'What are: ".matches",".spice",".push",".getElementById"?',
-        Questions: ['Object','Method','Element','function'],
-        Answer: 'Method'
+        question: 'What are: ".matches",".spice",".push",".getElementById"?',
+        choiceA: 'Object',
+        choiceB: 'Method',
+        choiceC: 'Element',
+        choiceD: 'Function',
+        answer: 'B'
     },
 ]
 
