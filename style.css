@@ -12,7 +12,6 @@ body{
     background: white;    
 }
 
-.startBtn,
 .quizRulesBox{
     position: absolute;
     top: 50%;
@@ -21,6 +20,7 @@ body{
 }
 
 .quizRulesBox{
+
     background-color: cornsilk;
     position: absolute;
     border-radius: 20%;
@@ -29,8 +29,9 @@ body{
     padding: 0 20px 30px;
     border: 10px double crimson;
 }
-/* .quizRulesBox::after{
-    } */
+.quizRulesBox::after{
+    display: contents;
+    }
 
 .quizRulesBox .rules span{
     color: crimson;
@@ -45,7 +46,7 @@ body{
     padding: 0 25px;
 }
 
-.start {
+#start {
     font-size: 25px;
     color: rgb(122, 11, 104);
     border-radius: 20px;
