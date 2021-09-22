@@ -1,6 +1,6 @@
 /* styling of the body of the html */
 body{
-    background: url("https://wbcbnews.com/wp-content/uploads/2017/10/MaxPixel.freegreatpicture.com-Digital-Computer-Coding-Html-Code-Programming-Web-1076533.jpg");
+    /* background: url("https://wbcbnews.com/wp-content/uploads/2017/10/MaxPixel.freegreatpicture.com-Digital-Computer-Coding-Html-Code-Programming-Web-1076533.jpg"); */
     background-size: cover ;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0%;
@@ -53,4 +53,10 @@ body{
     color: orchid;
     border-radius: 10%;
     border: 5px crimson double;
+}
+#questionElement{
+    color: purple;
+}
+#answersElement{
+    color: purple;
 }
