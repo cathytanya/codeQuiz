@@ -59,6 +59,13 @@ function startBtn (){
     setTime();
 }
 
+function startQuiz(questionElement){
+    for (let i=0; i<questions.length; i++){
+        
+
+
+    }
+}
 
 let timerLeft = 60;
 
