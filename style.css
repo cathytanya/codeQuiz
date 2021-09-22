@@ -1,4 +1,6 @@
 body{
+    background: url("https://wbcbnews.com/wp-content/uploads/2017/10/MaxPixel.freegreatpicture.com-Digital-Computer-Coding-Html-Code-Programming-Web-1076533.jpg");
+    background-size: cover ;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0%;
     height: 100%
@@ -28,11 +30,12 @@ body{
     padding: 0 20px 30px;
     border: 10px double crimson;
 }
+
 .quizRulesBox::after{
     display: contents;
-    }
+}
 
-.quizRulesBox .rules span{
+#quizRulesBox .rules span{
     color: crimson;
 }
 
@@ -51,4 +54,14 @@ body{
     border-radius: 20px;
     background: rgb(221, 183, 220); 
     align-items: center;
+}
+
+#timer{
+    display: flexbox;
+    padding: auto;
+    font-size: 20px;
+    background-color: cornsilk;
+    color: crimson;
+    border-radius: 20%;
+    border: 5px crimson double;
 }

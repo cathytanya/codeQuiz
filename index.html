@@ -8,7 +8,6 @@
     <title>BSC Code Quiz</title>
 </head>
 <body>
-    <img src="https://wbcbnews.com/wp-content/uploads/2017/10/MaxPixel.freegreatpicture.com-Digital-Computer-Coding-Html-Code-Programming-Web-1076533.jpg" width="1346" height="623">
     <article id="quizRulesBox">
         <section class="quizRule">
             <span>Quiz Rules</span>
@@ -25,22 +24,23 @@
     </article>
 
     <section id = question>
-        <h1 id = questionElement></h1>
-        <div id="answersElement"></div>
+        <h1 id = "questionElement"></h1>
+        <div id= "optionsElement"></div>
+        <div id= "answersElement"></div>
         <div id = "timer"></div>
     </section>
     <!-- options class and id are holding the questions and the possible answers for the question -->
-    <section id="options">
-        <div class="options" id="A" onclick="checkAnswer(A)">A</div>
-        <div class="options" id="B" onclick="checkAnswer(B)">B</div>
-        <div class="options" id="C" onclick="checkAnswer(C)">C</div>
-        <div class="options" id="D" onclick="checkAnswer(D)">D</div>
+    <section id= "options">
+        <div class= "options" id = "A" onclick = "checkAnswer(A)">A</div>
+        <div class= "options" id = "B" onclick = "checkAnswer(B)">B</div>
+        <div class= "options" id = "C" onclick = "checkAnswer(C)">C</div>
+        <div class= "options" id = "D" onclick= "checkAnswer(D)">D</div>
     </section>
     <section id="highScore">
             <!-- change attributs for the start -->
             <!-- they have a start functtion that they  -->
     </section>
 
-    <script src="/script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

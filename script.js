@@ -2,96 +2,98 @@
 let start = document.getElementById("start");
 let question = document.getElementById("question");
 let questionElement = document.getElementById("questionElement");
+let optionsElement = document.getElementById("options")
 let answerElement = document.getElementById("answerElement");
 let timer = document.getElementById("timer");
 let highScore = document.getElementById("highScore");
-// each of these choices will hold the options the user have
-let choiceA = document.getElementById("A");
-let choiceB = document.getElementById("B");
-let choiceC = document.getElementById("C");
-let choiceD = document.getElementById("D");
-// will help with moving from one question to the next
-let lastQuestionIndex = question.length-1;
-let runningQuestionIndex = 0;
-// putting all the questions/options/answers into the dictonary
+
 let questions = [
     {
         // Question 1
-        question: 'Which element is nonsemantic?',
-        choiceA: 'div',
-        choiceB: 'form',
-        choiceC: 'header',
-        choiceD:'footer',
-        answer: 'A'
+        questionElement: 'Which element is nonsemantic?',
+        optionsElement: ['div','form','header','footer'],
+        answerElement: 'div'
     },
     {
         // question 2
-        question: 'What is the purpose of  HTML?',
-        choiceA: 'Basic structure of website',
-        choiceB: 'Used to control presentation',
-        choiceC: 'Used to control the behaviour of different elements',
-        choiceD: 'Task automation',
-        answer: 'A'
+        questionElement: 'What is the purpose of  HTML?',
+        optionsElement: ['Basic structure of website','Used to control presentation','Used to control the behaviour of different elements','Task automation'],
+        answerElement: 'Basic structure of website'
     },
     {
         // question 3
-        question: 'What is the purpose of  CSS?',
-        choiceA: 'Basic structure of website',
-        choiceB: 'Used to control presentation',
-        choiceC: 'Used to control the behaviour of different elements',
-        choiceD: 'Task automation',
-        answer: 'B'
+        questionElement: 'What is the purpose of  CSS?',
+        optionsElement: ['Basic structure of website','Used to control presentation','Used to control the behaviour of different elements','Task automation'],
+        answerElement: 'Used to control presentation'
     },
     {
         // question 4
-        question: 'What is the purpose of  JavaScript?',
-        choiceA: 'Basic structure of website',
-        choiceB: 'Used to control presentation',
-        choiceC: 'Used to control the behaviour of different elements',
-        choiceD: 'Task automation',
-        answer: 'C'
+        questionElement: 'What is the purpose of  JavaScript?',
+        optionsElement: ['Basic structure of website','Used to control presentation','Used to control the behaviour of different elements','Task automation'],
+         answer: 'Used to control the behaviour of different elements'
     },
     {
         // question 5
-        question: 'What does "ppl" represent in the following? ppl = ["Bob","Sam","Jill","Jo","Shawn"]',
-        choiceA: 'boolean',
-        choiceB: 'array',
-        choiceC: 'string',
-        choiceD: 'variable',
-        answer: 'B'
+        questionElement: 'What does "ppl" represent in the following? ppl = ["Bob","Sam","Jill","Jo","Shawn"]',
+        optionsElement: ['boolean','array','string','variable'],
+        answerElement: 'array'
     },
     {
         // question 6
-        question: 'What is a "true" element?',
-        choiceA: 'boolean',
-        choiceB: 'array',
-        choiceC: 'string',
-        choiceD: 'variable',
-        answer: 'A'
+        questionElement: 'What is a "true" element?',
+        optionsElement: ['boolean','array','string','variable'],
+        answerElement: 'boolean'
     },
     {
         // quesiton 7
-        question: 'What are: ".matches",".spice",".push",".getElementById"?',
-        choiceA: 'Object',
-        choiceB: 'Method',
-        choiceC: 'Element',
-        choiceD: 'Function',
-        answer: 'B'
+        questionElement: 'What are: ".matches",".spice",".push",".getElementById"?',
+        optionsElement: ['Object','Method','Element','Function'],
+        answerElement: 'Method'
     },
 ]
 
-function renderQuestion(){
-    let q = question[runningQuestionIndex];
-    question.innerHTML = "<p>"+q.question+"</p>";
-    choiceA.innerHTML = q.choiceA;
-    choiceB.innerHTML = q.choiceB;
-    choiceC.innerHTML = q.choiceC;
-    choiceD.innerHTML = q.choiceD;
-}
-runningQuestionIndex++
-renderQuestion();
-// function startquiz (){
-//     let quizRulesBox = document.getElementById("quizRulesBox");
-//     quizRulesBox.setAttribute("style", "display: none");
+// // the function access the running question, then change the innerHTML of the right element
+// function renderQuestion(){
+//     let q = question[runningQuestionIndex];
+//     question.innerHTML = "<p>"+q.question+"</p>";
+//     choiceA.innerHTML = q.choiceA;
+//     choiceB.innerHTML = q.choiceB;
+//     choiceC.innerHTML = q.choiceC;
+//     choiceD.innerHTML = q.choiceD;
 // }
-// start.onclick = startquiz
+
+// // the function is to check if the answer is correct
+// function checkAnswer(answer){
+//     if (questions[runningQuestionIndex].correct == answer){
+//         timer++
+//         answerCorrect();
+//     }else{
+//         answerWrong()
+//     }
+// }
+// runningQuestionIndex++
+// renderQuestion();
+
+function startBtn (){
+    let quizRulesBox = document.getElementById("quizRulesBox");
+    quizRulesBox.setAttribute("style", "display: none");
+    setTime();
+}
+
+let timerLeft = 60;
+
+function setTime() {
+  let timerInterval = setInterval(function() {
+    timerLeft--;
+    timer.textContent = "Time: " + timerLeft + " sec left";
+    if(timerLeft === 0) {
+      clearInterval(timerInterval);
+      sendMessage();
+    }
+  }, 1000);
+}
+function sendMessage() {
+  timer.textContent = " ";
+}
+
+start.onclick = startBtn;
