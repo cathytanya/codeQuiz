@@ -52,33 +52,13 @@ let questions = [
     },
 ]
 
-// // the function access the running question, then change the innerHTML of the right element
-// function renderQuestion(){
-//     let q = question[runningQuestionIndex];
-//     question.innerHTML = "<p>"+q.question+"</p>";
-//     choiceA.innerHTML = q.choiceA;
-//     choiceB.innerHTML = q.choiceB;
-//     choiceC.innerHTML = q.choiceC;
-//     choiceD.innerHTML = q.choiceD;
-// }
-
-// // the function is to check if the answer is correct
-// function checkAnswer(answer){
-//     if (questions[runningQuestionIndex].correct == answer){
-//         timer++
-//         answerCorrect();
-//     }else{
-//         answerWrong()
-//     }
-// }
-// runningQuestionIndex++
-// renderQuestion();
 
 function startBtn (){
     let quizRulesBox = document.getElementById("quizRulesBox");
     quizRulesBox.setAttribute("style", "display: none");
     setTime();
 }
+
 
 let timerLeft = 60;
 

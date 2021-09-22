@@ -1,3 +1,4 @@
+/* styling of the body of the html */
 body{
     background: url("https://wbcbnews.com/wp-content/uploads/2017/10/MaxPixel.freegreatpicture.com-Digital-Computer-Coding-Html-Code-Programming-Web-1076533.jpg");
     background-size: cover ;
@@ -5,14 +6,13 @@ body{
     margin: 0%;
     height: 100%
 }
-
+/* styling the quiz rules box */
 .quizRulesBox{
-    position: absolute;
+    position:static;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
-
 #quizRulesBox{
     background-color: cornsilk;
     position: absolute;
@@ -26,20 +26,19 @@ body{
 .quizRulesBox::after{
     display: contents;
 }
-
+/* changing the colour of few words in the rules list */
 #quizRulesBox .rules span{
     color: crimson;
 }
-
-.quizRulesBox .quizRule{
-    height: 70px;
+/* style the container which holds the title stating "Quiz Rules"  */
+#quizRulesBox .quizRuleTitle{
+    height: 80px;
     width: 80%;
     border-bottom: 4px solid orchid;
-    font-size: 50px;
-    align-items: center;
+    font-size: 75px;
     padding: 0 25px;
 }
-
+/* styling the start button */
 #start {
     font-size: 25px;
     color: rgb(122, 11, 104);
@@ -47,13 +46,11 @@ body{
     background: rgb(221, 183, 220); 
     align-items: center;
 }
-
+/* styling the timer */
 #timer{
-    display: flexbox;
-    padding: auto;
-    font-size: 20px;
+    font-size: 40px;
     background-color: cornsilk;
-    color: crimson;
-    border-radius: 20%;
+    color: orchid;
+    border-radius: 10%;
     border: 5px crimson double;
 }
