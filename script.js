@@ -1,11 +1,15 @@
 // selecting all the elements
 let start = document.getElementById("start");
-let question = document.getElementById("question");
+let questionSection = document.getElementById("question");
 let questionEl = document.getElementById("questionElement");
 let optionsEl = document.getElementById("optionsElement")
 let answerEl = document.getElementById("answersElement");
 let timer = document.getElementById("timer");
 let highScore = document.getElementById("highScore");
+let index = 0
+let correct = " "
+let shuffleQuestions
+let currentQuestions
 
 let questions = [
     {
@@ -22,73 +26,98 @@ let questions = [
     },
     {
         // question 3
-        questionElement: 'What is the purpose of  CSS?',
-        optionsElement: ['Basic structure of website','Used to control presentation','Used to control the behaviour of different elements','Task automation'],
+        statement: 'What is the purpose of  CSS?',
+        choice: ['Basic structure of website','Used to control presentation','Used to control the behaviour of different elements','Task automation'],
         right: 'Used to control presentation'
     },
     {
         // question 4
-        questionElement: 'What is the purpose of  JavaScript?',
-        optionsElement: ['Basic structure of website','Used to control presentation','Used to control the behaviour of different elements','Task automation'],
+        statement: 'What is the purpose of  JavaScript?',
+        choice: ['Basic structure of website','Used to control presentation','Used to control the behaviour of different elements','Task automation'],
         right: 'Used to control the behaviour of different elements'
     },
     {
         // question 5
-        questionElement: 'What does "ppl" represent in the following? ppl = ["Bob","Sam","Jill","Jo","Shawn"]',
-        optionsElement: ['boolean','array','string','variable'],
+        statement: 'What does "ppl" represent in the following? ppl = ["Bob","Sam","Jill","Jo","Shawn"]',
+        choice: ['boolean','array','string','variable'],
         right: 'array'
     },
     {
         // question 6
-        questionElement: 'What is a "true" element?',
-        optionsElement: ['boolean','array','string','variable'],
+        statement: 'What is a "true" element?',
+        choice: ['boolean','array','string','variable'],
         right: 'boolean'
     },
     {
         // quesiton 7
-        questionElement: 'What are: ".matches",".spice",".push",".getElementById"?',
-        optionsElement: ['Object','Method','Element','Function'],
+        statement: 'What are: ".matches",".spice",".push",".getElementById"?',
+        choice: ['Object','Method','Element','Function'],
         right: 'Method'
     },
 ]
 
+function present(){
+    questionEl.textContent = questions[index].statement;
+    optionsEl.textContent = questions[index].choice;
+    correct = questions[index].right
+    answerEl.textContent = questions[index].right
+    console.log(questions[index].statement)
+    
+}
 
+// start button once pressed
 function startBtn (){
     let quizRulesBox = document.getElementById("quizRulesBox");
+    start.addEventListener("click",present);
     quizRulesBox.setAttribute("style", "display: none");
-    // setTime();
+    setTime();
+    present();
+    console.log(questions[2].statement)
+    console.log(questions[2].choice)
 }
-// function presentQuestion(){
-// questionEl.textContent = questions[0].statement;
-// console.log(question)
-// }
 
-// function presentOptions(){
-// optionsEl.textContent = questions[0].choice
-// }
 function present(){
-    for(let i=0;i < questions.length;i++) {
-    questionEl.textContent = questions[i].statement;
-    optionsEl.textContent = questions[i].choice;
-    answerEl.textContent = questions[i].right
-    }
+    questionEl.textContent = questions[index].statement;
+    optionsEl.textContent = questions[index].choice;
+    correct = questions[index].right
+    optionsEl.addEventListener("click", verifyAnswer(index))
+
+    // answerEl.textContent = questions[index].right
+    console.log(questions[index].statement)
 }
 
-present();
-// let timerLeft = 60;
+function verifyAnswer(){
+    questions.addEventListener("click", function(event) {
+        if (optionsEl.target.textContent === questions[index].right){
+            present(statement,choice);
+            timerLeft++
+            answerEl.textContent = questions[index].right
+        }else{
+            present(statement,choice);
+            timerLeft--
+        }
+    })
+}
 
-// function setTime() {
-//   let timerInterval = setInterval(function() {
-//     timerLeft--;
-//     timer.textContent = "Time: " + timerLeft + " sec left";
-//     if(timerLeft === 0) {
-//       clearInterval(timerInterval);
-//       sendMessage();
-//     }
-//   }, 1000);
-// }
-// function sendMessage() {
-//   timer.textContent = " ";
-// }
+
+
+
+// this is the timer for the quiz
+let timerLeft = 60;
+function setTime() {
+  let timerInterval = setInterval(function() {
+    timerLeft--;
+    timer.textContent = "Time: " + timerLeft + " sec left";
+    if(timerLeft === 0) {
+      clearInterval(timerInterval);
+      sendMessage();
+    }
+  }, 1000);
+}
+console.log(timerLeft)
+
+function sendMessage() {
+  timer.textContent = " ";
+}
 
 start.onclick = startBtn;
