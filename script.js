@@ -77,11 +77,14 @@ function startBtn (){
 }
 
 function present(){
+    // presents the Question
     questionEl.textContent = questions[index].statement;
+    // presenets the options
     optionsEl.textContent = questions[index].choice;
     correct = questions[index].right
-    optionsEl.addEventListener("click", verifyAnswer(index))
+    optionsEl.addEventListener("click", verifyAnswer(index)
 
+    )
     // answerEl.textContent = questions[index].right
     console.log(questions[index].statement)
 }
