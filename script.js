@@ -92,12 +92,12 @@ function present(){
 function verifyAnswer(){
     questions.addEventListener("click", function(event) {
         if (optionsEl.target.textContent === questions[index].right){
-            present(statement,choice);
-            timerLeft++
+            present();
+            timerLeft = timerLeft + 10
             answerEl.textContent = questions[index].right
         }else{
-            present(statement,choice);
-            timerLeft--
+            present();
+            timerLeft = timerLeft - 10
         }
     })
 }
