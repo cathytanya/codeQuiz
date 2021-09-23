@@ -72,8 +72,6 @@ function startBtn (){
     quizRulesBox.setAttribute("style", "display: none");
     setTime();
     present();
-    console.log(questions[2].statement)
-    console.log(questions[2].choice)
 }
 
 function present(){
