@@ -56,15 +56,6 @@ let questions = [
     },
 ]
 
-function present(){
-    questionEl.textContent = questions[index].statement;
-    optionsEl.textContent = questions[index].choice;
-    correct = questions[index].right
-    answerEl.textContent = questions[index].right
-    console.log(questions[index].statement)
-    
-}
-
 // start button once pressed
 function startBtn (){
     let quizRulesBox = document.getElementById("quizRulesBox");
@@ -75,30 +66,30 @@ function startBtn (){
 }
 
 function present(){
-    // presents the Question
-    questionEl.textContent = questions[index].statement;
-    // presenets the options
-    optionsEl.textContent = questions[index].choice;
-    correct = questions[index].right
-    optionsEl.addEventListener("click", verifyAnswer(index)
-
-    )
-    // answerEl.textContent = questions[index].right
-    console.log(questions[index].statement)
+    let currentQuestions = questions[index]
+    questionEl.textContent = currentQuestions.statement;
+    optionsElement.innerHTML = " "
+    currentQuestions.choice.forEach((choice, i )=> {
+        var choiceBtn = document.createElement("Button")
+        choiceBtn.setAttribute('value', choice);
+        choiceBtn.textContent = i + 1 + "." + choice;
+        choiceBtn.onclick = verifyAnswer;
+        optionsEl.appendChild(choiceBtn);
+   });
+    // optionsEl.addEventListener("click", verifyAnswer(index))
 }
 
 function verifyAnswer(){
-    questions.addEventListener("click", function(event) {
-        if (optionsEl.target.textContent === questions[index].right){
-            present();
-            timerLeft = timerLeft + 10
-            answerEl.textContent = questions[index].right
-        }else{
-            present();
-            timerLeft = timerLeft - 10
-        }
-    })
+    if (this.value === questions[index].right){
+        timerLeft = timerLeft + 10
+    }else{
+        timerLeft = timerLeft - 10
+    }
+    index++
+    present();
 }
+
+
 
 
 

@@ -1,11 +1,18 @@
 /* styling of the body of the html */
+*::before, *::after{
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
 body{
     /* background: url("https://wbcbnews.com/wp-content/uploads/2017/10/MaxPixel.freegreatpicture.com-Digital-Computer-Coding-Html-Code-Programming-Web-1076533.jpg"); */
     background-size: cover ;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0%;
-    height: 100%
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
+
 /* styling the quiz rules box */
 .quizRulesBox{
     position:static;
