@@ -89,7 +89,7 @@ function verifyAnswer(){
 }
 
 // this is the timer for the quiz
-let timerLeft = 60;
+let timerLeft = 120;
 function setTime() {
   let timerInterval = setInterval(function() {
     timerLeft--;

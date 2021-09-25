@@ -4,7 +4,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 body{
-    /* background: url("https://wbcbnews.com/wp-content/uploads/2017/10/MaxPixel.freegreatpicture.com-Digital-Computer-Coding-Html-Code-Programming-Web-1076533.jpg"); */
+    background: url("https://wbcbnews.com/wp-content/uploads/2017/10/MaxPixel.freegreatpicture.com-Digital-Computer-Coding-Html-Code-Programming-Web-1076533.jpg");
     background-size: cover ;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0%;
@@ -15,18 +15,18 @@ body{
 
 /* styling the quiz rules box */
 .quizRulesBox{
-    position:static;
+    position:absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
+
 #quizRulesBox{
     background-color: cornsilk;
     position: absolute;
     border-radius: 20%;
-    font-size: 20px;
     width: 600px;
-    padding: 0 20px 30px;
+    padding: 0 50px 50px ;
     border: 10px double crimson;
 }
 
@@ -34,7 +34,7 @@ body{
     display: contents;
 }
 /* changing the colour of few words in the rules list */
-#quizRulesBox .rules span{
+#quizRulesBox .quizRuleTitle .ruleStyle .rules span{
     color: crimson;
 }
 /* style the container which holds the title stating "Quiz Rules"  */
@@ -43,27 +43,57 @@ body{
     width: 80%;
     border-bottom: 4px solid orchid;
     font-size: 75px;
-    padding: 0 25px;
+    padding: 0 45px;
+}
+
+#quizRulesBox .quizRuleTitle .ruleStyle .rules{
+    font-size: 15px;
+    text-indent: 30%;
 }
 /* styling the start button */
-#start {
+#quizRulesBox .button #start,
+#quizRulesBox .button #submit{
+    display: block;
     font-size: 25px;
     color: rgb(122, 11, 104);
     border-radius: 20px;
     background: rgb(221, 183, 220); 
-    align-items: center;
+    top:30%;
+    left:50%;
 }
-/* styling the timer */
-#timer{
-    font-size: 40px;
+#question::before{
+    content: none;
+}
+
+body #question{
+    position: absolute;
+    top: 20%;
+    left: 20%;
+    text-align: center;
+    font-size: 35px;
     background-color: cornsilk;
     color: orchid;
     border-radius: 10%;
     border: 5px crimson double;
+    width: 540px;
 }
+
+/* the font of the questions presented */
 #questionElement{
     color: purple;
+    font-size: 30px;
 }
+
 #answersElement{
     color: purple;
+    font-size: 20;
+}
+
+#optionsElement{
+    display: block;
+    text-align: center;
+}
+
+#timer{
+    font-size: 25px;
 }
