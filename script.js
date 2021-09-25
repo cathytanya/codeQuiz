@@ -8,9 +8,8 @@ let timer = document.getElementById("timer");
 let highScore = document.getElementById("highScore");
 let index = 0
 let correct = " "
-let shuffleQuestions
-let currentQuestions
 
+// the array that contains the questions/choices
 let questions = [
     {
         // Question 1
@@ -64,7 +63,7 @@ function startBtn (){
     setTime();
     present();
 }
-
+// this is how the questions will appear 
 function present(){
     let currentQuestions = questions[index]
     questionEl.textContent = currentQuestions.statement;
@@ -76,9 +75,9 @@ function present(){
         choiceBtn.onclick = verifyAnswer;
         optionsEl.appendChild(choiceBtn);
    });
-    // optionsEl.addEventListener("click", verifyAnswer(index))
 }
 
+// verify that the answer is correct/wrong and how it will affect the time
 function verifyAnswer(){
     if (this.value === questions[index].right){
         timerLeft = timerLeft + 10
@@ -89,11 +88,6 @@ function verifyAnswer(){
     present();
 }
 
-
-
-
-
-
 // this is the timer for the quiz
 let timerLeft = 60;
 function setTime() {
@@ -102,14 +96,19 @@ function setTime() {
     timer.textContent = "Time: " + timerLeft + " sec left";
     if(timerLeft === 0) {
       clearInterval(timerInterval);
-      sendMessage();
+      endGame();
     }
   }, 1000);
 }
 console.log(timerLeft)
 
-function sendMessage() {
-  timer.textContent = " ";
-}
-
 start.onclick = startBtn;
+
+function endGame(){
+    let userAnswer = " ";
+    for (let index = 0; index < questions.length; index++) {
+        const userAnswer = questions[index].querySelector;
+        
+    }
+    
+}
