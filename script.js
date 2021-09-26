@@ -89,7 +89,7 @@ function verifyAnswer(){
 }
 
 // this is the timer for the quiz
-let timerLeft = 120;
+let timerLeft = 70;
 function setTime() {
   let timerInterval = setInterval(function() {
     timerLeft--;
@@ -105,10 +105,13 @@ console.log(timerLeft)
 start.onclick = startBtn;
 
 function endGame(){
-    let userAnswer = " ";
-    for (let index = 0; index < questions.length; index++) {
-        const userAnswer = questions[index].querySelector;
+    if (questions[index]===questions[6] && timerLeft === 0){
         
     }
-    
+    // let userAnswer = " ";
+    // for (let index = 0; index < questions.length; index++) {
+    //     const userAnswer = questions[index].querySelector;
+        
+    // }
+  
 }

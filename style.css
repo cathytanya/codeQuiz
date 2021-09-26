@@ -47,8 +47,8 @@ body{
 }
 
 #quizRulesBox .quizRuleTitle .ruleStyle .rules{
-    font-size: 15px;
-    text-indent: 30%;
+    font-size: 14px;
+    text-indent: 20%;
 }
 /* styling the start button */
 #quizRulesBox .button #start,
@@ -64,7 +64,6 @@ body{
 #question::before{
     content: none;
 }
-
 body #question{
     position: absolute;
     top: 20%;
@@ -90,8 +89,9 @@ body #question{
 }
 
 #optionsElement{
-    display: block;
+    display: flex;
     text-align: center;
+    flex-direction: column;
 }
 
 #timer{
