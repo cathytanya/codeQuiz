@@ -48,18 +48,18 @@ body{
 
 #quizRulesBox .quizRuleTitle .ruleStyle .rules{
     font-size: 14px;
-    text-indent: 20%;
+    text-indent: 16%;
 }
 /* styling the start button */
 #quizRulesBox .button #start,
 #quizRulesBox .button #submit{
     display: block;
-    font-size: 25px;
+    font-size: 20px;
     color: rgb(122, 11, 104);
     border-radius: 20px;
     background: rgb(221, 183, 220); 
     top:30%;
-    left:50%;
+    left:10%;
 }
 #question::before{
     content: none;
